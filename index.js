@@ -44,6 +44,9 @@ export default async (config) => {
         const title = matchTitle?.[1].trim()
         meta = meta?.replace(matchTitle?.[0], '').trim()
 
+        // handle missing lang
+        lang = lang ?? 'text'
+
         // Shiki options
         const options = {
             lang, // code block lang
