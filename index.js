@@ -107,7 +107,12 @@ export default async (config) => {
                         const wrapper = {
                             type: 'element',
                             tagName: 'div',
-                            properties: { className: ['highlighter'] },
+                            properties: {
+                                className: [
+                                    'highlighter',
+                                    ...(barChildren.length ? ['highlighter--has-bar'] : []),
+                                ],
+                            },
                             children: wrapperChildren,
                         }
 

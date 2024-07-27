@@ -44,7 +44,7 @@ console.log("Hello, world!")
 Output
 
 ```html
-<div class="highlighter">
+<div class="highlighter highlighter--has-bar">
     <!-- bar -->
     <div class="highlighter__bar">
         <span class="highlighter__title">title</span>
