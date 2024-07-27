@@ -47,6 +47,9 @@ export default async (config) => {
         // handle missing lang
         lang = lang ?? 'text'
 
+        // don't display lang for plain text
+        const displayLangExceptions = ['text', 'plain']
+
         // Shiki options
         const options = {
             lang, // code block lang
@@ -59,7 +62,6 @@ export default async (config) => {
 
                     root(node) {
                         const barChildren = []
-
                         // create title
                         if (displayTitle && matchTitle) {
                             barChildren.push({
@@ -73,7 +75,7 @@ export default async (config) => {
                         }
 
                         // create lang
-                        if (displayLang) {
+                        if (displayLang && !displayLangExceptions.includes(lang)) {
                             barChildren.push({
                                 type: 'element',
                                 tagName: 'span',
