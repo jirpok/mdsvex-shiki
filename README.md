@@ -41,7 +41,7 @@ console.log("Hello, world!")
 ```
 ````
 
-Output
+HTML output
 
 ```html
 <div class="highlighter highlighter--has-bar">
